@@ -13,6 +13,7 @@ nav {
   width: 100%;
   padding: 15px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(53, 53, 53);
@@ -30,4 +31,216 @@ nav button {
 
 nav button:active {
   transform: scale(0.95);
+}
+
+.form {
+  width: 450px;
+  max-width: 100%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 2px gray;
+}
+
+.form h2 {
+  padding: 20px 10px;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  width: 100%;
+  text-align: center;
+}
+
+.form .form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.form .form-control label {
+  color: rgb(95, 95, 95);
+  font-size: 14px;
+}
+
+.form .form-control input {
+  padding: 5px;
+  border: 1px solid rgb(202, 202, 202);
+}
+
+.form > input[type="submit"] {
+  cursor: pointer;
+  margin: 20px;
+  padding: 10px 30px;
+  border: 0;
+  background: linear-gradient(to bottom, gray, rgb(29, 29, 29));
+  color: white;
+  border-radius: 5px;
+}
+
+.form > input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-container .dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.user-container .dashboard button {
+  cursor: pointer;
+  padding: 10px 30px;
+  border: 0;
+  background: linear-gradient(to bottom, gray, rgb(29, 29, 29));
+  color: white;
+  border-radius: 5px;
+}
+
+.user-container .dashboard button:active {
+  transform: scale(0.95);
+}
+
+.user-container .controls {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-container .controls li {
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(240, 240, 240);
+}
+
+.user-container .controls li:nth-child(2) {
+  border-left: 1px solid rgb(219, 219, 219);
+  border-right: 1px solid rgb(219, 219, 219);
+}
+
+.user-container .controls li:hover {
+  background-color: rgb(196, 196, 196);
+}
+
+.user-container .controls li:active {
+  background-color: rgb(129, 129, 129);
+  color: white;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.profile h1 {
+  padding: 20px 10px;
+}
+
+.profile ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  max-width: 100%;
+}
+
+.profile ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(253, 253, 253);
+}
+
+.profile ul li:nth-child(odd) {
+  background-color: rgb(88, 88, 88);
+  color: white;
+}
+
+.profile ul li p:nth-child(1) {
+  flex: 1;
+}
+
+.profile ul li p:nth-child(2) {
+  flex: 2;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.products h1 {
+  padding: 20px 10px;
+}
+
+.products .products-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.product-item {
+  cursor: pointer;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  transition: all 100ms ease-in-out;
+}
+
+.product-item .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.product-item .details h3 {
+  color: rgb(61, 61, 61);
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  box-shadow: 0 2px 5px gray;
+}
+
+.product-item:active {
+  filter: brightness(1.1);
+}
+
+.product-item img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }

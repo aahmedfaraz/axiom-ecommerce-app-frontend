@@ -11,8 +11,13 @@ const SignUp = () => {
   const onChange = (e) =>
     setFormUser({ ...formUser, [e.target.name]: e.target.value });
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(formUser);
+  };
+
   return (
-    <form action='' className='form'>
+    <form onSubmit={onSubmit} className='form'>
       <h2>Register Yourself</h2>
       <div className='form-control'>
         <label htmlFor='name'>Name</label>
@@ -58,6 +63,7 @@ const SignUp = () => {
           placeholder='Enter Password Again'
         />
       </div>
+      <input type='submit' value='Sign Up' />
     </form>
   );
 };
