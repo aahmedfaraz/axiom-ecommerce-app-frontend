@@ -229,13 +229,13 @@ nav button:active {
   color: rgb(61, 61, 61);
 }
 
-.product-item:hover {
+.products-container .product-item:hover {
   transform: scale(1.05);
   z-index: 1;
   box-shadow: 0 2px 5px gray;
 }
 
-.product-item:active {
+.products-container .product-item:active {
   filter: brightness(1.1);
 }
 
@@ -243,4 +243,254 @@ nav button:active {
   width: 250px;
   height: 250px;
   object-fit: cover;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cart-container h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+.cart-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  max-width: 100%;
+}
+
+.cart-container ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-container ul li:nth-child(1) span {
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  color: rgb(224, 70, 43);
+}
+
+.cart-container ul li span {
+  flex: 1;
+  padding: 5px 10px;
+}
+
+.cart-container ul li:nth-last-child(1) span:nth-last-child(1),
+.cart-container ul li:nth-last-child(1) span:nth-last-child(2) {
+  background-color: rgb(255, 171, 157);
+}
+
+.cart-container button,
+.product-card button,
+.seller-product-container form input[type="submit"] {
+  cursor: pointer;
+  padding: 20px 50px;
+  background: linear-gradient(to bottom, tomato, red);
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  margin: 20px auto;
+}
+
+.cart-container button:active,
+.product-card button:active,
+.seller-product-container form input[type="submit"]:active,
+.product-item .controls button:active {
+  transform: scale(0.95);
+}
+
+.seller-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.seller-product-container form {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 2px gray;
+}
+
+.seller-product-container h1 {
+  padding: 20px;
+  text-align: center;
+}
+
+.seller-product-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  max-width: 100%;
+  margin: 20px;
+}
+
+.seller-product-container form h2 {
+  padding: 10px;
+  text-align: center;
+}
+
+.seller-product-container form .form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.seller-product-container form .form-control input,
+.seller-product-container form .form-control textarea {
+  width: 100%;
+  padding: 5px;
+}
+
+.all-seller-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+}
+
+.product-item .controls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-right: 5px;
+}
+
+.product-item .controls button:nth-child(1) {
+  cursor: pointer;
+  padding: 10px 15px;
+  background: linear-gradient(to bottom, dodgerblue, blue);
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  margin: 2px;
+}
+
+.product-item .controls button:nth-child(2) {
+  cursor: pointer;
+  padding: 10px 15px;
+  background: linear-gradient(to bottom, tomato, red);
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  margin: 2px;
+}
+
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.orders-container h1 {
+  padding: 20px;
+}
+
+.orders-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  max-width: 100%;
+}
+
+.orders-container ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orders-container ul li span {
+  flex: 1;
+  padding: 5px;
+}
+
+.orders-container ul li:nth-child(1) span {
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+}
+
+.orders-container ul li:nth-child(1) span:nth-last-child(1) {
+  border: 0;
+}
+
+.orders-container ul li button {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 5px;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+.orders-container ul li button:hover {
+  background-color: rgb(207, 58, 4);
+}
+
+.orders-container ul li button:active {
+  transform: scale(0.95);
+}
+
+.orders-container ul li:nth-last-child(1) span:nth-last-child(2),
+.orders-container ul li:nth-last-child(1) span:nth-last-child(3) {
+  background-color: rgb(255, 160, 144);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  max-width: 100%;
+  padding: 20px;
+  background-color: rgb(250, 250, 250);
+  margin: 20px 10px;
+  box-shadow: 0 0 1px gray;
+}
+
+.product-card ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.product-card ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.product-card ul li span {
+  flex: 1;
+  padding: 10px 5px;
 }

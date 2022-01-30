@@ -15,6 +15,7 @@ import SellerProducts from "./components/products/SellerProducts";
 import Cart from "./components/cart/Cart";
 import Orders from "./components/orders/Orders";
 import NotFound from "./components/layout/NotFound";
+import ProductCard from "./components/products/ProductCard";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             <Route path='buyer' element={<Buyer />}>
               <Route path='profile' element={<Profile />} />
               <Route path='products' element={<Products />} />
+              <Route path='products/:productID' element={<ProductCard />} />
               <Route path='cart' element={<Cart />} />
             </Route>
             <Route path='seller' element={<Seller />}>
